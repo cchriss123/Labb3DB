@@ -335,7 +335,7 @@ public class Main {
             pstmt.setString(1, name);
             pstmt.setInt(2, id);
             pstmt.executeUpdate();
-            System.out.println("Du har uppdaterat valt album");
+            System.out.println("Du har uppdaterat vald kategori");
             pressEnter();
         }
         catch (SQLException e) {
@@ -392,7 +392,7 @@ public class Main {
     }
 
 
-    // Update methods
+    // delete methods
     private static void deleteMenu() {
         System.out.println("""
 				To what do you want to delete?
@@ -415,7 +415,7 @@ public class Main {
     private static void removeCategory(){
 
         selectCategory();
-        System.out.println("Skriv in id:t på skivan som ska tas bort: ");
+        System.out.println("Skriv in id:t på den kategori som ska tas bort: ");
         int inputId = parseInput();
         deleteCategory(inputId);
     }
